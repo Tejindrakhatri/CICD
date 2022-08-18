@@ -36,7 +36,7 @@ pipeline {
  
  stage('Code Checkout') {
   steps {
-  checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'tej', url: 'https://github.com/Tejindrakhatri/jenkinspipeline.git']]])
+ checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'tej', url: 'https://github.com/Tejindrakhatri/CICD.git']]])
   }
   }
  }
