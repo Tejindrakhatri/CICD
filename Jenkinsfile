@@ -1,26 +1,6 @@
 pipeline {
   agent any 
-  nodes {
-      label 'slave01'
-}
-}
-
-  tools {
-    maven 'maven3'
   
-  }
-  
-  options {
-    buildDiscarder logRotator(
-      "daysTokeepStr": '5',
-      "numTokeepStr": '10'
-      
-  )
-  }
-   environment {
-       APP_NAME = "tej-demo"
-       APP_ENV = "tej"
-        
  }  
   stages {
      stage('clean workspace') {
