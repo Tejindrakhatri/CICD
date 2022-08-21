@@ -1,7 +1,5 @@
 pipeline {
-  node{
-      label 'slave01'
-}
+
   agent any 
   stages {
      stage('clean workspace') {
