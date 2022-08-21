@@ -3,7 +3,7 @@ pipeline {
   stages {
      stage('clean workspace') {
       steps {
-       cleanWs()
+       
          sh """
            echo "clean the workspace for $APP_NAME"
            echo "we are in stage 1"
