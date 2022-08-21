@@ -6,7 +6,11 @@ pipeline {
   stages {
      stage('clean workspace') {
       steps {
-       
+        // Clean before build
+                cleanWs()
+                // We need to explicitly checkout from SCM here
+                checkout scm
+                echo "Building ${env.JOB_NAME}..."
          sh """
            echo "clean the workspace for $APP_NAME"
            echo "we are in stage 1"
