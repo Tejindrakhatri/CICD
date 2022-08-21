@@ -1,3 +1,4 @@
+"stages"
 pipeline {
   agent{
     node{
@@ -12,8 +13,8 @@ pipeline {
   
   options {
     buildDiscarder logRotator(
-      daysTokeepStr: '5',
-      numTokeepStr: '10'
+      "daysTokeepStr": '5',
+      "numTokeepStr": '10'
       
   )
   }
@@ -21,8 +22,7 @@ pipeline {
        APP_NAME = "tej-demo"
        APP_ENV = "tej"
         
- }
-        
+ }     
   stage {
      stage('clean workspace') {
       steps {
